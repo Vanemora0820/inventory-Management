@@ -1,1 +1,29 @@
-<p>register-inventory works!</p>
+<div>
+  <h2>Registro de inventario</h2>
+  <app-notification [message]="notificationMessage" [type]="notificationType"></app-notification>
+  <form (ngSubmit)="registerInventory()">
+    <label for="userId">Nombre de usuario:</label>
+    <select id="userId" [(ngModel)]="inventory.userId" name="userId" required>
+      <option *ngFor="let user of users" [value]="user.id">{{ user.username }}</option>
+    </select>
+
+    <label for="productId">Productos:</label>
+    <select id="productId" [(ngModel)]="inventory.productId" name="productId" required>
+      <option *ngFor="let product of products" [value]="product.id">{{ product.name }}</option>
+    </select>
+
+    <label for="quantity">Cantidad:</label>
+    <input type="number" id="quantity" [(ngModel)]="inventory.quantity" name="quantity" required>
+
+    <label for="serialNumber">Número de serie:</label>
+    <input type="text" id="serialNumber" [(ngModel)]="inventory.serialNumber" name="serialNumber" required>
+
+    <label for="status">Estado:</label>
+    <input type="text" id="status" [(ngModel)]="inventory.status" name="status" required>
+
+    <label for="date">Fecha:</label>
+    <input type="date" id="date" [(ngModel)]="inventory.date" name="date" required>
+
+    <button type="submit">Guardar y enviar</button>
+  </form>
+</div>

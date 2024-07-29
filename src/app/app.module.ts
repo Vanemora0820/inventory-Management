@@ -5,16 +5,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegisterInventoryComponent } from './components/register-inventory/register-inventory.component';
 import { DeliverInventoryComponent } from './components/deliver-inventory/deliver-inventory.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { NotificationComponent } from './notification/notification.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterInventoryComponent,
-    DeliverInventoryComponent
+    DeliverInventoryComponent,
+    NotificationComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

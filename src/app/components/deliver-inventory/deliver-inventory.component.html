@@ -1,1 +1,9 @@
-<p>deliver-inventory works!</p>
+<div>
+    <h2>Entregar Inventario</h2>
+    <div *ngFor="let item of inventory">
+      <p>{{ item.productName }} - {{ item.serialNumber }}</p>
+      <button *ngIf="item.status !== 'Delivered'" (click)="deliverInventory(item.id)">Entregar</button>
+      <span *ngIf="item.status === 'Delivered'">Entregado</span>
+    </div>
+  </div>
+  
