@@ -7,7 +7,8 @@ import { RegisterInventoryComponent } from './components/register-inventory/regi
 import { DeliverInventoryComponent } from './components/deliver-inventory/deliver-inventory.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { NotificationComponent } from './notification/notification.component';
+import { NotificationComponent } from './components/notification/notification.component';
+import { MainComponent } from './components/main/main.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { NotificationComponent } from './notification/notification.component';
     AppComponent,
     RegisterInventoryComponent,
     DeliverInventoryComponent,
-    NotificationComponent
+    NotificationComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,

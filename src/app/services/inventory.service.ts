@@ -25,10 +25,12 @@ export class InventoryService {
   }
 
   deliverInventory(id: number): Observable<any> {
-    return this.http.put(`${this.apiUrl}/inventory/${id}/deliver`, {});
+    const url = `${this.apiUrl}/inventory/${id}/deliver`;
+    return this.http.put(url,{});
   }
+  
   getUsers(): Observable<any> {
-    return this.http.get(`${this.apiUrl}/user`); // Asegúrate de que este endpoint esté disponible en tu backend
+    return this.http.get(`${this.apiUrl}/user`); 
   }
 
 }
