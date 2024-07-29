@@ -1,31 +1,35 @@
-# InventoryManagement
+# Inventory Management Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.11.
+Este es el frontend para la aplicación de gestión de inventario desarrollada con Angular. El frontend se conecta al backend para permitir la visualización y entrega de productos en inventario.
 
-## Development server
+## Requisitos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Node.js (versión 16 )
+- Angular CLI (versión 15 )
 
-## Code scaffolding
+## Instalación
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. **Clonar el repositorio:**
 
-## Build
+   ```bash
+   git clone https://github.com/Vanemora0820/inventory-Management.git
+ 
+2. **Instalar dependencias**
+ npm install
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+3. **Modificar la URL del backend**
 
-## Running unit tests
+export const environment = {
+  production: false,
+  apiUrl: 'http://localhost:8080/api'
+};
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+4. **Subir el front**
 
-## Running end-to-end tests
+ng serve
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Contacto
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-
-# inventory-Management
-Aplicación de  inventario Front
+Nombre: Vanessa Mora
+Email: vanemorahdez@gmail.com
 

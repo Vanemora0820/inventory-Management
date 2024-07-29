@@ -1,0 +1,14 @@
+<div>
+  <h2>Entregar Inventario</h2>
+  <div *ngFor="let item of inventoryList" class="inventory-item">
+    <p> <strong>{{ item.productName }}</strong></p>
+    <p> {{ item.serialNumber }}</p>
+    <button *ngIf="item.status !== 'Delivered'"
+            (click)="deliverInventory(item.id)"
+            [ngClass]="{'delivered': item.status === 'Delivered'}">
+      {{ item.status === 'Delivered' ? 'Entregado' : 'Entregar' }}
+    </button>
+    <span *ngIf="item.status === 'Delivered'" class="status-delivered">Entregado</span>
+  </div>
+</div>
+
